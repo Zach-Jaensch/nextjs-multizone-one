@@ -10,27 +10,39 @@ const UL = styled.ul`
   gap: 1rem;
 `;
 
+const Stack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
 export function Menu() {
   return (
-    <nav>
-      <UL>
-        <li>
-          <Link href="/">Home page for app 1</Link>
-        </li>
-        <li>
-          <Link href="/internal">Internal page for app 1</Link>
-        </li>
-        <li>
-          <Link href="/internal/sub">Sub page for app 1</Link>
-        </li>
+    <Stack>
+      <nav>
+        <UL>
+          <li>
+            <Link href="/">Home page for app 1</Link>
+          </li>
+          <li>
+            <Link href="/internal">Internal page for app 1</Link>
+          </li>
+          <li>
+            <Link href="/internal/sub">Sub page for app 1</Link>
+          </li>
+        </UL>
+      </nav>
 
-        <li>
-          <a href="/other">Home page for app 2</a>
-        </li>
-        <li>
-          <a href="/other/internal">Internal page for app 2</a>
-        </li>
-      </UL>
-    </nav>
+      <nav>
+        <UL>
+          <li>
+            <a href="/other">Home page for app 2</a>
+          </li>
+          <li>
+            <a href="/other/internal">Internal page for app 2</a>
+          </li>
+        </UL>
+      </nav>
+    </Stack>
   );
 }
